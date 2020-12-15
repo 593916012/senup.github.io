@@ -217,216 +217,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.senup.cn/p/0.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/1.jpeg">
-      <meta itemprop="name" content="高等游民">
-      <meta itemprop="description" content="卷发星人/程序猿/指弹菜鸟/社恐肥宅">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Senup">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/0.html" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-22 10:41:56" itemprop="dateCreated datePublished" datetime="2020-08-22T10:41:56+08:00">2020-08-22</time>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/p/0.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/p/0.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>703</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><p><a href="https://www.cnblogs.com/fengzheng/p/12557762.html" target="_blank" rel="noopener">MySQL 中是如何实现事务隔离的</a></p>
-<h3 id="一、MySQL事务隔离级别"><a href="#一、MySQL事务隔离级别" class="headerlink" title="一、MySQL事务隔离级别"></a>一、MySQL事务隔离级别</h3><ol>
-<li>读未提交：该级别事务可以读取到其他未提交的事务，造成脏读。</li>
-<li>读已提交：能读取到其他提交的事务，可以避免脏读，但可造成不可重复读与幻读。</li>
-<li>可重复读：MySQL默认事务隔离级别，可以解决不可重复读，但无法阻止新插入的记录造成后者可能会查到前者无法查出的数据。</li>
-<li>序列化：事务的最高隔离级别，所有事务串行执行，性能最差。</li>
-</ol>
-<h3 id="二、Spring事务隔离级别"><a href="#二、Spring事务隔离级别" class="headerlink" title="二、Spring事务隔离级别"></a>二、Spring事务隔离级别</h3><ol>
-<li>Isolation.Default：Spring：默认隔离级别，即采用数据库的隔离级别。</li>
-<li>Isolation.Read_Uncommit：事务未提交可读，会出现脏读。</li>
-<li>Isolation.Read_Commit：不可脏读，但会出现幻读和不可重复读。</li>
-<li>Isolation.Repeatable_Read：不可脏读，不可重复读，但会出现幻读。</li>
-<li>Isolation.Searializable：事务的最高隔离级别，所有事务串行执行。</li>
-</ol>
-<h3 id="三、Spring事务传播行为"><a href="#三、Spring事务传播行为" class="headerlink" title="三、Spring事务传播行为"></a>三、Spring事务传播行为</h3><ol>
-<li>Required：如果当前存在事务会支持该事物，不存在则开启新的事务。</li>
-<li>Required_New：创建新的逻辑事务，表示每次都创建新的逻辑事务。</li>
-<li>Supports：支持当前事务，如果没有事务就会以非事务方式执行。</li>
-<li>Not_Support：以非事务方式执行，如果当前存在事务就暂停该事务，以非事务方式运行。</li>
-<li>Mandatory：支持当前事务，如果没有事务则抛出异常。</li>
-<li>Never：以非事务方式运行，如果有事务则抛出异常。</li>
-<li>Nested：嵌套事务支持，如果当前存在事务，则嵌套在事务内部执行，如不存在事务会新建事务，内部事务不影响外部事务，外部事务回滚则会导致内部事务回滚。</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.senup.cn/p/ccfb.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/1.jpeg">
-      <meta itemprop="name" content="高等游民">
-      <meta itemprop="description" content="卷发星人/程序猿/指弹菜鸟/社恐肥宅">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Senup">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/p/ccfb.html" class="post-title-link" itemprop="url">常见SQL优化技巧</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-20 08:46:55" itemprop="dateCreated datePublished" datetime="2020-08-20T08:46:55+08:00">2020-08-20</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/生活技术吉他/" itemprop="url" rel="index"><span itemprop="name">生活技术吉他</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/p/ccfb.html#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/p/ccfb.html" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>9.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>8 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>施工中…</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/p/ccfb.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://www.senup.cn/p/48a1.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1313,6 +1103,213 @@
   
   
 
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.senup.cn/p/92dc.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.jpeg">
+      <meta itemprop="name" content="高等游民">
+      <meta itemprop="description" content="卷发星人/程序猿/指弹菜鸟/社恐肥宅">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Senup">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/92dc.html" class="post-title-link" itemprop="url">IO和NIO的区别</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-12 19:36:20" itemprop="dateCreated datePublished" datetime="2020-08-12T19:36:20+08:00">2020-08-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/p/92dc.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/p/92dc.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3.9k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>NIO是以块的方式处理数据，但是IO是以最基础的字节流的形式去写入和读出的。所以在<strong>效率</strong>上的话，肯定是NIO效率比IO效率会高出很多。</li>
+<li>NIO不在是和IO一样用OutputStream和InputStream 输入<strong>流的形式</strong>来进行处理数据的，但是又是基于这种流的形式，而是采用了<strong>通道和缓冲区</strong>的形式来进行处理数据的。</li>
+<li>还有一点就是NIO的通道是可以<strong>双向</strong>的，但是IO中的流只能是单向的。</li>
+<li>还有就是NIO的缓冲区（其实也就是一个字节数组）还可以进行分片，可以建立只读缓冲区、直接缓冲区和间接缓冲区，只读缓冲区很明显就是字面意思，直接缓冲区是为加快 I/O 速度，而以一种特殊的方式分配其内存的缓冲区。</li>
+<li>补充一点：NIO比传统的BIO核心区别就是，NIO采用的是<strong>多路复用的IO模型</strong>，普通的IO用的是<strong>阻塞的IO模型</strong>，两个之间的效率肯定是多路复用效率更高</li>
+</ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/p/92dc.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.senup.cn/p/11f6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.jpeg">
+      <meta itemprop="name" content="高等游民">
+      <meta itemprop="description" content="卷发星人/程序猿/指弹菜鸟/社恐肥宅">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Senup">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/p/11f6.html" class="post-title-link" itemprop="url">通过反射获取泛型</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-12 18:50:02" itemprop="dateCreated datePublished" datetime="2020-08-12T18:50:02+08:00">2020-08-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/p/11f6.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/p/11f6.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>729</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>1、通过<code>Field.getGenericType()</code>方法获取到<code>Type</code>类型（该对象中包含了泛型信息）<br> 2、把<code>Field.getGenericType()</code>返回的类型强转成<code>ParameterizedType</code>类型<br> 3、调用<code>ParameterizedType</code>里的<code>Type[]getActualTypeArguments()</code><br> 4、<code>Type[]</code>中就保存了泛型的信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Generic</span></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> Map&lt;String, Object&gt; cache;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GenericDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        Class clz = Generic<span class="class">.<span class="keyword">class</span></span>;</span><br><span class="line">        Field f = clz.getField(<span class="string">"cache"</span>);</span><br><span class="line">        Class cl = f.getType();<span class="comment">//这个方法获取到了类型，但是不带泛型信息</span></span><br><span class="line">        System.out.println(cl);<span class="comment">//interface java.util.Map,</span></span><br><span class="line">        <span class="comment">//获取泛型信息</span></span><br><span class="line">        Type type = f.getGenericType();</span><br><span class="line">        ParameterizedType pType = (ParameterizedType) type;</span><br><span class="line">        Type[] types = pType.getActualTypeArguments();</span><br><span class="line">        <span class="keyword">for</span> (Type type2 : types) &#123;</span><br><span class="line">            System.out.println(type2);<span class="comment">//class java.lang.String</span></span><br><span class="line">            &#125;                     <span class="comment">//class java.lang.Object   泛型类型</span></span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
@@ -1383,7 +1380,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-count">127</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1488,12 +1485,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">309k</span>
+    <span title="站点总字数">307k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:41</span>
+    <span title="站点阅读时长">4:39</span>
 </div>
 
         
