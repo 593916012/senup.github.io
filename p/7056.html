@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/home.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/home.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+  <meta name="google-site-verification" content="xYfyORg7NRaZ710bOerpWDuZ6ftibqls5bOt3eiFSoM">
+  <meta name="baidu-site-verification" content="FhQkF9o54P">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.senup.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":30,"onmobile":true},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"buttons","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":5,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="施工中…">
+<meta name="keywords" content="技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络">
+<meta property="og:url" content="https://www.senup.cn/p/7056.html">
+<meta property="og:site_name" content="Senup">
+<meta property="og:description" content="施工中…">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-10-30T02:30:23.143Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算机网络">
+<meta name="twitter:description" content="施工中…">
+
+<link rel="canonical" href="https://www.senup.cn/p/7056.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>计算机网络 | Senup</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Senup</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">走在风中 今天阳光 突然好温柔</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-life">
+
+    <a href="/categories/生活" rel="section"><i class="fa fa-heartbeat fa-fw"></i>生活</a>
+
+  </li>
+        <li class="menu-item menu-item-technology">
+
+    <a href="/categories/技术" rel="section"><i class="fa fa-calendar fa-fw"></i>技术</a>
+
+  </li>
+        <li class="menu-item menu-item-guitar">
+
+    <a href="/categories/吉他" rel="section"><i class="fa fa-tags fa-fw"></i>吉他</a>
+
+  </li>
+        <li class="menu-item menu-item-books">
+
+    <a href="/books/" rel="section"><i class="fa fa-book fa-fw"></i>读书</a>
+
+  </li>
+        <li class="menu-item menu-item-movies">
+
+    <a href="/movies/" rel="section"><i class="fa fa-film fa-fw"></i>电影</a>
+
+  </li>
+        <li class="menu-item menu-item-games">
+
+    <a href="/games/" rel="section"><i class="fa fa-gamepad fa-fw"></i>游戏</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-notes">
+
+    <a href="/notes/" rel="section"><i class="fa fa-comment fa-fw"></i>留言板</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/senup" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.senup.cn/p/7056.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/1.jpeg">
+      <meta itemprop="name" content="高等游民">
+      <meta itemprop="description" content="卷发星人/程序猿/指弹菜鸟/社恐肥宅">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Senup">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算机网络
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-09-09 14:40:25" itemprop="dateCreated datePublished" datetime="2020-09-09T14:40:25+08:00">2020-09-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/p/7056.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/p/7056.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>施工中…</p>
+<a id="more"></a>
+
+
+
+<h2 id="GET-POST-区别"><a href="#GET-POST-区别" class="headerlink" title="GET/POST 区别"></a>GET/POST 区别</h2><ol>
+<li>GET 用于获取资源，而 POST 用于传输实体主体。</li>
+<li>Get请求在路径上，post请求在请求体中</li>
+<li>Get传输速度更快，因为post为了保证安全多了几次握手</li>
+<li>Get传输大小容量有限制，Post则没有</li>
+</ol>
+<h2 id="UDP-TCP区别"><a href="#UDP-TCP区别" class="headerlink" title="UDP/TCP区别"></a>UDP/TCP区别</h2><ol>
+<li>tcp报文段面向连接，传输安全可靠，拥有切分数据块，编号顺序传输+检验和，三次握手，超时重传，流量控制，拥塞控制等机制</li>
+<li>udp用户数据报无连接，提供尽可能交付，速度快。首部字段较为简单，有四个：源端口，目的端口，长度，校验和</li>
+<li>tcp用于安全可靠的传输，比如文件传输ftp 右键传输 smtp pop等</li>
+<li>udp用于即时通讯，比如QQ聊天等</li>
+</ol>
+<h2 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h2><p>以及衍生出来一些列的 TCP 的问题：什么是 TIME-WAIT、为什么可以是三次挥手、为什么不能是两次握手、流量控制、滑动窗口、Nagle 算法、糊涂窗口综合症、拥塞控制、慢启动、拥塞避免、快重传、快恢复、长连接 VS 短连接、应用场景是什么。</p>
+<ol>
+<li>发送SYN = 1，携带初始序号seq = x</li>
+<li>发送SYN=1，Ack = 1，确认序号为x+1 再发送自己的初始序号seq = y</li>
+<li>发现Ack = 1，确认序号为y+1 发送序号为x+1</li>
+</ol>
+<p>tpc采用的是全双工通信，需要确保发送方和接收方的发送接收全都正常。</p>
+<p>第三次握手可以防止网络滞留出现端口错误。比如主机a由于网络滞留重发了新的连接，如果只是两次握手的话那么主机B会开启两个端口处理同样的请求，这样就容易造成错误。如果采用三次握手，那么客户端确认的时候只会确认一次。</p>
+<h2 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h2><ol>
+<li><p>发送fin = 1 seq = u</p>
+</li>
+<li><p>syn = 1 ack = 1  确认u+1 seq = v</p>
+</li>
+<li><p>fin = 1 ack = 1 seq = w  ack = u+1</p>
+</li>
+<li><p>ack = 1 ack = w+1  seq = u+1</p>
+<p>TIME-WAIT为什么存在？</p>
+</li>
+</ol>
+<p>这个时间设置为2msl,主要是为了接收端能够收到信息，如果接收端收不到会在这个时间重传fin，那么客户端能够进行重传。</p>
+<p>这个时间足够让旧的报文段消失，不会干扰新的连接请求。</p>
+<h2 id="超时重传"><a href="#超时重传" class="headerlink" title="超时重传"></a>超时重传</h2><p>tcp发出报文段后，会启动一个定时器，等待目的端确认收到这个报文段。如果不能及时收到，则重发这个报文段。</p>
+<h2 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h2><p>TCP利用可变大小的滑动窗口实现流量控制。当接收方来不及处理发送方的报文段的时候，能提示发送方降低发送速率，防止包丢失。</p>
+<h2 id="拥塞控制"><a href="#拥塞控制" class="headerlink" title="拥塞控制"></a>拥塞控制</h2><p>当网络拥塞时减少数据的发送。维护了一个拥塞窗口。</p>
+<p>用到了四种算法  慢启动 拥塞避免  快重传 快回恢复</p>
+<h2 id="ARQ"><a href="#ARQ" class="headerlink" title="ARQ"></a>ARQ</h2><p>自动重传请求</p>
+<p>包含了停止等待aqp和连续arq，主要原理是 发送方发送分组后，要等待目的端确认后才发送下一个分组。</p>
+<p>连续arq是维护了一个发送窗口，窗口内的分组可以连续发送，只需要确认最后一个分组，就可以表明所有分组正确收到。缺点：中间丢失的分组需要重传</p>
+<h2 id="ARP"><a href="#ARP" class="headerlink" title="ARP"></a>ARP</h2><p>地址解析协议</p>
+<p>将IP地址解析为物理的mac地址</p>
+<h2 id="长连接"><a href="#长连接" class="headerlink" title="长连接"></a>长连接</h2><p>请求报文和响应报文中有一个请求头，上面表示connection：keep-alive 用于长连接</p>
+<p>长连接解决了短连接频繁创建销毁连接等耗费资源的问题</p>
+<h2 id="HTTP-1-0、1-1、2-0"><a href="#HTTP-1-0、1-1、2-0" class="headerlink" title="HTTP 1.0、1.1、2.0"></a>HTTP 1.0、1.1、2.0</h2><p>1.1比1.0 多了</p>
+<ol>
+<li>支持了长连接（减少资源消耗）流水线（一个连接传输多个请求）</li>
+<li>新增24个错误码，比如409资源与当前状态冲突 410资源被删除等</li>
+<li>引入多种缓存控制策略</li>
+<li>允许只请求资源某个部分，进行带宽优化，节省带宽</li>
+</ol>
+<hr>
+<p>HTTP/1.x 实现简单是以牺牲性能为代价的（后面为2.0的改进）：</p>
+<ul>
+<li>客户端需要使用多个连接才能实现并发和缩短延迟；—&gt;二进制分帧层，承载了任意数量的双向数据流</li>
+<li>不会压缩请求和响应首部，从而导致不必要的网络流量；—&gt;维护和更新一个包含之前见过的首部字段表，从而避免了重复传输。</li>
+<li>不支持有效的资源优先级，致使底层 TCP 连接的利用率低下。—&gt;服务端推送相关资源</li>
+</ul>
+<hr>
+<h2 id="说一下-HTTPS-的流程、SSL-是什么、什么是非对称加密、对称加密、RSA-具体实现"><a href="#说一下-HTTPS-的流程、SSL-是什么、什么是非对称加密、对称加密、RSA-具体实现" class="headerlink" title="说一下 HTTPS 的流程、SSL 是什么、什么是非对称加密、对称加密、RSA 具体实现"></a>说一下 HTTPS 的流程、SSL 是什么、什么是非对称加密、对称加密、RSA 具体实现</h2><p>ssl安全套接层，运行在tcp/ip上，而https运行在ssl/tls上</p>
+<hr>
+<p><strong>HTTPS</strong>（全称：Hyper Text Transfer Protocol over Secure Socket Layer 超文本传输安全协议）<br>HTTPS在传统的HTTP和TCP之间加了一层用于加密解密的SSL/TLS层（安全套接层Secure Sockets Layer/安全传输层Transport Layer Security）层。使用HTTPS必须要有一套自己的数字证书（包含公钥和私钥）。</p>
+<p><strong>HTTPS解决的问题</strong></p>
+<p>信息加密传输：第三方无法窃听；<br>校验机制：一旦被篡改，通信双方会立刻发现；<br>身份证书：防止身份被冒充。<br><strong>HTTPS加密过程：</strong></p>
+<p>客户端请求服务器获取证书公钥<br>客户端(SSL/TLS)解析证书（无效会弹出警告）<br>生成随机值<br>用公钥加密随机值生成密钥<br>客户端将秘钥发送给服务器<br>服务端用私钥解密秘钥得到随机值<br>将信息和随机值混合在一起进行对称加密<br>将加密的内容发送给客户端<br>客户端用秘钥解密信息</p>
+<p>加密过程使用了<strong>对称加密和非对称加密。</strong></p>
+<p>对称加密: 客户端和服务端采用相同的密钥经行加密</p>
+<pre><code>encrypt(明文，秘钥) = 密文
+decrypt(密文，秘钥) = 明文</code></pre><p>非对称加密：客户端通过公钥加密。服务端通过私钥解密</p>
+<pre><code>encrypt(明文，公钥) = 密文
+
+decrypt(密文，私钥) = 明文</code></pre><p>因为TLS握手的过程中采用了非对称加密，客户端本身不知道服务器的秘钥，这样通信就不会被中间人劫持。此外这一步服务端还提供了证书，并且可能要求客户端提供证书。关于证书下文会提到，只要有了证书，就能保证和你通信的对方是真实的，而不是别人伪造的。</p>
+<p>那然后<strong>验证证书</strong>呢？</p>
+<p>客户端获取到了站点证书，拿到了站点的公钥<br>客户端找到其站点证书颁发者的信息<br>站点证书的颁发者验证服务端站点是否可信<br>往上回溯，找到根证书颁发者<br>通过根证书颁发者一步步验证站点证书颁布者是否可信<br><strong>附：</strong></p>
+<p><strong>HTTPS默认使用443端口，而HTTP默认使用80端口。</strong><br><strong>TLS就是从SSL发展而来的，只是SSL发展到3.0版本后改成了TLS</strong><br><strong>第一次请求中TLS握手的代价很大</strong><br><strong>后续的请求会共用第一次请求的协商结果</strong></p>
+<hr>
+<p>对称加密：密钥只有一个，加密解密都用同一个密钥，加解密速度快，比如DES算法 AES算法</p>
+<p>非对称加密：密钥成对存在，公钥加密需要私钥解密，私钥加密需要公钥解密，比如RSA、DSA算法</p>
+<p>RSA 就是这样一种非对称加密方式，也就是：</p>
+<ul>
+<li>使用算法可以生成两把钥匙 A 和 B</li>
+<li>使用 A 加密的信息，使用 B 可以解开</li>
+<li>使用 B 加密的信息，使用 A 可以解开</li>
+</ul>
+<hr>
+<h2 id="OSI-七层模型是什么、都有哪些协议、TCP-IP-四层是什么。"><a href="#OSI-七层模型是什么、都有哪些协议、TCP-IP-四层是什么。" class="headerlink" title="OSI 七层模型是什么、都有哪些协议、TCP/IP 四层是什么。"></a>OSI 七层模型是什么、都有哪些协议、TCP/IP 四层是什么。</h2><p>七层多了表示层和会话层 </p>
+<p>四层中数据链路层和物理层合并为网络接口层。</p>
+<h2 id="DNS、ARP-协议原理"><a href="#DNS、ARP-协议原理" class="headerlink" title="DNS、ARP 协议原理"></a>DNS、ARP 协议原理</h2><p>网络客户端就是我们平常使用的电脑，打开浏览器，输入一个域名。比如输入<a href="http://www.163.com，这时，你使用的电脑会发出一个DNS请求到本地DNS服务器。本地DNS服务器一般都是你的网络接入服务器商提供，比如中国电信，中国移动。" target="_blank" rel="noopener">www.163.com，这时，你使用的电脑会发出一个DNS请求到本地DNS服务器。本地DNS服务器一般都是你的网络接入服务器商提供，比如中国电信，中国移动。</a></p>
+<p>查询<a href="http://www.163.com的DNS请求到达本地DNS服务器之后，本地DNS服务器会首先查询它的缓存记录，如果缓存中有此条记录，就可以直接返回结果。如果没有，本地DNS服务器还要向DNS根服务器进行查询。" target="_blank" rel="noopener">www.163.com的DNS请求到达本地DNS服务器之后，本地DNS服务器会首先查询它的缓存记录，如果缓存中有此条记录，就可以直接返回结果。如果没有，本地DNS服务器还要向DNS根服务器进行查询。</a></p>
+<p>根DNS服务器没有记录具体的域名和IP地址的对应关系，而是告诉本地DNS服务器，你可以到域服务器上去继续查询，并给出域服务器的地址。</p>
+<p>本地DNS服务器继续向域服务器发出请求，在这个例子中，请求的对象是.com域服务器。.com域服务器收到请求之后，也不会直接返回域名和IP地址的对应关系，而是告诉本地DNS服务器，你的域名的解析服务器的地址。</p>
+<p>最后，本地DNS服务器向域名的解析服务器发出请求，这时就能收到一个域名和IP地址对应关系，本地DNS服务器不仅要把IP地址返回给用户电脑，还要把这个对应关系保存在缓存中，以备下次别的用户查询时，可以直接返回结果，加快网络访问。</p>
+<hr>
+<p>现假设主机A的IP地址为192.168.1.1，MAC地址为0A-11-22-33-44-01；</p>
+<p>主机B的IP地址为192.168.1.2，MAC地址为0A-11-22-33-44-02；</p>
+<p>当主机A要与主机B通信时，地址解析协议可以将主机B的IP地址（192.168.1.2）解析成主机B的MAC地址，以下为工作流程：</p>
+<blockquote>
+<p>第1步：根据主机A上的<a href="http://baike.baidu.com/view/149989.htm" target="_blank" rel="noopener">路由表</a>内容，IP确定用于访问主机B的转发IP地址是192.168.1.2。然后A主机在自己的本地ARP缓存中检查主机B的匹配MAC地址。</p>
+<p>第2步：如果主机A在ARP缓存中没有找到映射，它将询问192.168.1.2的硬件地址，从而将ARP请求帧广 播到本地网络上的所有主机。源主机A的IP地址和MAC地址都包括在ARP请求中。本地网络上的每台主机都接收到ARP请求并且检查是否与自己的IP地址 匹配。如果主机发现请求的IP地址与自己的IP地址不匹配，它将丢弃ARP请求。</p>
+<p>第3步：主机B确定ARP请求中的IP地址与自己的IP地址匹配，则将主机A的IP地址和MAC地址映射添加到本地ARP缓存中。</p>
+<p>第4步：主机B将包含其MAC地址的ARP回复消息直接发送回主机A。</p>
+<p>第5步：当主机A收到从主机B发来的ARP回复消息时，会用主机B的IP和MAC地址映射更新ARP缓存。本机缓存是有生存期的，生存期结束后，将再次重复上面的过程。主机B的MAC地址一旦确定，主机A就能向主机B发送IP通信了。</p>
+</blockquote>
+<h2 id="地址栏输入-URL-发生了什么"><a href="#地址栏输入-URL-发生了什么" class="headerlink" title="地址栏输入 URL 发生了什么"></a>地址栏输入 URL 发生了什么</h2><ul>
+<li>dns解析</li>
+<li>tcp连接</li>
+<li>http请求</li>
+<li>服务器处理请求返回报文</li>
+<li>浏览器渲染到视图</li>
+</ul>
+<h2 id="WebSocket-是什么"><a href="#WebSocket-是什么" class="headerlink" title="WebSocket 是什么"></a>WebSocket 是什么</h2><h2 id="一些网络安全问题"><a href="#一些网络安全问题" class="headerlink" title="一些网络安全问题"></a><a href="https://www.cnblogs.com/rinack/p/11549410.html" target="_blank" rel="noopener">一些网络安全问题</a></h2><p>比如 DOS 攻击如何解决、DNS 欺骗如何解决、ARP欺骗、SQL注入、XSS、CSRF、iframe 安全问题、本地存储数据问题、第三方依赖的安全性问题。</p>
+<hr>
+<p>DOS 拒绝服务，通过消耗网络宽带或系统资源，使网络或计算机不能提供正常的服务。</p>
+<p>DDOS 凡是攻击者通过控制在网络上的傀儡主机，同时发动他们向目标主机进行拒绝服务攻击的方式称为分布式拒绝服务攻击。</p>
+<ul>
+<li>设置复杂口令，减低系统被控制的可能性</li>
+<li>关闭不必要的端口与服务</li>
+</ul>
+<hr>
+<p>DNS欺骗就是攻击者冒充域名服务器的一种欺骗行为。</p>
+<p>原理：如果可以冒充域名服务器，然后把查询的IP地址设为攻击者的IP地址，这样的话，用户上网就只能看到攻击者的主页，而不是用户想要取得的网站的主页 了，这就是DNS欺骗的基本原理。DNS欺骗其实并不是真的“黑掉”了对方的网站，而是冒名顶替、招摇撞骗罢了。</p>
+<p>用ＩＰ访问重要的服务，这样至少可以避开ＤＮＳ欺骗攻击。最根本的解决办法就是加密所有对外的数据流，对服务器来说就是尽量使用SSH之类的有加密支持的协议，对一般用户应该用ＰＧＰ之类的软件加密所有发到网络上的数据。</p>
+<hr>
+<p>ARP欺骗的运作原理是由攻击者发送假的ARP数据包到网上，尤其是送到网关上。其目的是要让送至特定的IP地址的流量被错误送到攻击者所取代的地方。因此攻击者可将这些流量另行转送到真正的网关（被动式数据包嗅探，passive sniffing）或是篡改后再转送（中间人攻击，man-in-the-middle attack）。攻击者亦可将ARP数据包导到不存在的<a href="https://baike.baidu.com/item/MAC地址" target="_blank" rel="noopener">MAC地址</a>以达到阻断服务攻击的效果，例如netcut软件。</p>
+<p>例如某一的IP地址是192.168.0.254，其MAC地址为00-11-22-33-44-55，网上上的计算机内ARP表会有这一笔ARP记录。攻击者发动攻击时，会大量发出已将192.168.0.254的MAC地址篡改为00-55-44-33-22-11的ARP数据包。那么网上上的计算机若将此伪造的ARP写入自身的ARP表后，计算机若要透过网上网关连到其他计算机时，数据包将被导到00-55-44-33-22-11这个MAC地址，因此攻击者可从此MAC地址截收到数据包，可篡改后再送回真正的网关，或是什么也不做，让网上无法连线</p>
+<p>最常用的方法就是做双绑定， 本地跟路由都做了mac地址绑定</p>
+<hr>
+<p>SQL注入是比较常见的网络攻击方式之一，主要是通过把SQL命令插入到Web表单递交或输入域名或页面请求的查询字符串，实现无帐号登录，甚至篡改数据库。</p>
+<ul>
+<li>对用户的输入进行校验，使用正则表达式过滤传入的参数;</li>
+<li>使用参数化语句，不要拼接sql，也可以使用安全的存储过程;</li>
+<li>不要使用管理员权限的数据库连接，为每个应用使用权限有限的数据库连接;</li>
+<li>检查数据存储类型;</li>
+<li>重要的信息一定要加密;</li>
+</ul>
+<hr>
+<p>跨站脚本(cross site script)简称为XSS，是一种经常出现在web应用中的计算机安全漏洞，也是web中最主流的攻击方式。</p>
+<p>XSS是指恶意攻击者利用网站没有对用户提交数据进行转义处理或者过滤不足的缺点，进而添加一些代码，嵌入到web页面中去，使别的用户访问都会执行相应的嵌入代码。</p>
+<ul>
+<li>XSS的根源主要是没完全过滤客户端提交的数据 ，所以重点是要过滤用户提交的信息。</li>
+<li>将重要的cookie标记为http only, 这样的话js 中的document.cookie语句就不能获取到cookie了。</li>
+<li>只允许用户输入我们期望的数据。例如：age用户年龄只允许用户输入数字，而数字之外的字符都过滤掉。</li>
+<li>对数据进行Html Encode 处理：用户将数据提交上来的时候进行HTML编码，将相应的符号转换为实体名称再进行下一步的处理。</li>
+<li>过滤或移除特殊的Html标签。</li>
+<li>过滤js事件的标签。例如 “onclick=”, “onfocus” 等。</li>
+</ul>
+<hr>
+<p>CSRF(Cross-site request forgery)跨站请求伪造，也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。</p>
+<p>XSS主要是利用站点内的信任用户，而CSRF则通过伪装来自受信任用户的请求，来利用受信任的网站。与XSS攻击相比，CSRF更具危险性。</p>
+<ul>
+<li>重要数据交互采用POST进行接收，当然是用POST也不是万能的，伪造一个form表单即可破解。</li>
+<li>使用验证码，只要是涉及到数据交互就先进行验证码验证，这个方法可以完全解决CSRF。</li>
+<li>但是出于用户体验考虑，网站不能给所有的操作都加上验证码。因此验证码只能作为一种辅助手段，不能作为主要解决方案。</li>
+<li>验证HTTP Referer字段，该字段记录了此次HTTP请求的来源地址，最常见的应用是图片防盗链。</li>
+<li>为每个表单添加令牌token并验证。</li>
+</ul>
+<hr>
+<h2 id="HTTP-是不保存状态的协议、那么如何保存用户状态"><a href="#HTTP-是不保存状态的协议、那么如何保存用户状态" class="headerlink" title="HTTP 是不保存状态的协议、那么如何保存用户状态"></a>HTTP 是不保存状态的协议、那么如何保存用户状态</h2><p>HTTP 是一种不保存状态，即无状态（stateless）协议。也就是说 HTTP 协议自身不对请求和响应之间的通信状态进行保存。那么我们保存用户状态呢？Session 机制的存在就是为了解决这个问题，Session 的主要作用就是通过服务端记录用户的状态。典型的场景是购物车，当你要添加商品到购物车的时候，系统不知道是哪个用户操作的，因为 HTTP 协议是无状态的。服务端给特定的用户创建特定的 Session 之后就可以标识这个用户并且跟踪这个用户了（一般情况下，服务器会在一定时间内保存这个 Session，过了时间限制，就会销毁这个Session）。</p>
+<p>在服务端保存 Session 的方法很多，最常用的就是内存和数据库(比如是使用内存数据库redis保存)。既然 Session 存放在服务器端，那么我们如何实现 Session 跟踪呢？大部分情况下，我们都是通过在 Cookie 中附加一个 Session ID 来方式来跟踪。</p>
+<hr>
+<h2 id="Cookie-的作用是什么、和-Session-有什么区别"><a href="#Cookie-的作用是什么、和-Session-有什么区别" class="headerlink" title="Cookie 的作用是什么、和 Session 有什么区别"></a>Cookie 的作用是什么、和 Session 有什么区别</h2><p>Cookie 和 Session都是用来跟踪浏览器用户身份的会话方式，但是两者的应用场景不太一样。</p>
+<p><strong>Cookie 一般用来保存用户信息</strong> 比如①我们在 Cookie 中保存已经登录过得用户信息，下次访问网站的时候页面可以自动帮你登录的一些基本信息给填了；②一般的网站都会有保持登录也就是说下次你再访问网站的时候就不需要重新登录了，这是因为用户登录的时候我们可以存放了一个 Token 在 Cookie 中，下次登录的时候只需要根据 Token 值来查找用户即可(为了安全考虑，重新登录一般要将 Token 重写)；③登录一次网站后访问网站其他页面不需要重新登录。<strong>Session 的主要作用就是通过服务端记录用户的状态。</strong> 典型的场景是购物车，当你要添加商品到购物车的时候，系统不知道是哪个用户操作的，因为 HTTP 协议是无状态的。服务端给特定的用户创建特定的 Session 之后就可以标识这个用户并且跟踪这个用户了。</p>
+<p>Cookie 数据保存在客户端(浏览器端)，Session 数据保存在服务器端。</p>
+<p>Cookie 存储在客户端中，而Session存储在服务器上，相对来说 Session 安全性更高。如果要在 Cookie 中存储一些敏感信息，不要直接写入 Cookie 中，最好能将 Cookie 信息加密然后使用到的时候再去服务器端解密。</p>
+<hr>
+<h2 id="Session-的实现机制是什么、分布式环境下有什么注意事项、如果注销-Session、设置-Session-的时长如何操作、默认时长是多少。"><a href="#Session-的实现机制是什么、分布式环境下有什么注意事项、如果注销-Session、设置-Session-的时长如何操作、默认时长是多少。" class="headerlink" title="Session 的实现机制是什么、分布式环境下有什么注意事项、如果注销 Session、设置 Session 的时长如何操作、默认时长是多少。"></a>Session 的实现机制是什么、分布式环境下有什么注意事项、如果注销 Session、设置 Session 的时长如何操作、默认时长是多少。</h2><p>session的常见实现形式是会话cookie（session cookie），即未设置过期时间的cookie，这个cookie的默认生命周期为浏览器会话期间，只要关闭浏览器窗口，cookie就消失了。实现机制是当用户发起一个请求的时候，服务器会检查该请求中是否包含sessionid，如果未包含，则系统会创造一个名为JSESSIONID的输出 cookie返回给浏览器(只放入内存，并不存在硬盘中)，并将其以HashTable的形式写到服务器的内存里面；当已经包含sessionid是，服务端会检查找到与该session相匹配的信息，如果存在则直接使用该sessionid，若不存在则重新生成新的 session。这里需要注意的是session始终是有服务端创建的，并非浏览器自己生成的。　但是浏览器的cookie被禁止后session就需要用get方法的URL重写的机制或使用POST方法提交隐藏表单的形式来实现。</p>
+<hr>
+<p>各种协议与 HTTP 协议之间的关系。<br>Servlet、Filter 和 Listener 分别是什么，用在什么地方，JSP 页面如何进行处理。</p>
+<h2 id="请求转发、URL-重定向和包含有什么区别，如何实现"><a href="#请求转发、URL-重定向和包含有什么区别，如何实现" class="headerlink" title="请求转发、URL 重定向和包含有什么区别，如何实现"></a>请求转发、URL 重定向和包含有什么区别，如何实现</h2><p>转发只是服务器做的一次跳转，地址栏不变，使用forward</p>
+<p>重定向是采用重定向状态码做的一次跳转，使用redirect</p>
+<hr>
+<h2 id="如何判断远程机器上某个端口是否开启，项目中需要查看域名在本地的解析-IP-，如何操作。"><a href="#如何判断远程机器上某个端口是否开启，项目中需要查看域名在本地的解析-IP-，如何操作。" class="headerlink" title="如何判断远程机器上某个端口是否开启，项目中需要查看域名在本地的解析 IP ，如何操作。"></a>如何判断远程机器上某个端口是否开启，项目中需要查看域名在本地的解析 IP ，如何操作。</h2><p>第一步：先判断网络是否接通,输入dos命令：ping 目标主机IP地址</p>
+<p>第二步：判断是否可以连接到端口：telnet 目标主机IP地址 端口号</p>
+<hr>
+<p>1、<strong>dig</strong> +<strong>short</strong> blog.csdn.net</p>
+<p>2、<strong>host</strong> blog.csdn.net</p>
+<p>3、<strong>nslookup</strong> blog.csdn.net</p>
+<p>4、<strong>ping</strong> blog.csdn.net</p>
+<hr>
+<p>Servlet 中，调用 JSP 展示元素和返回 String（即 api，一般是 json 数据）有什么区别。<br>nginx + tomcat 模式下，服务器段如何获取客户端请求 IP 。</p>
+<h2 id="Servlet-的生命周期是什么。"><a href="#Servlet-的生命周期是什么。" class="headerlink" title="Servlet 的生命周期是什么。"></a>Servlet 的生命周期是什么。</h2><p>Servlet 生命周期可被定义为从创建直到毁灭的整个过程。以下是 Servlet 遵循的过程：</p>
+<ul>
+<li>Servlet 通过调用 <strong>init ()</strong> 方法进行初始化。</li>
+<li>Servlet 调用 <strong>service()</strong> 方法来处理客户端的请求。</li>
+<li>Servlet 通过调用 <strong>destroy()</strong> 方法终止（结束）。</li>
+<li>最后，Servlet 是由 JVM 的垃圾回收器进行垃圾回收的。</li>
+</ul>
+<hr>
+<p>Servlet 是否是线程安全的。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/技术/" rel="tag"><i class="fa fa-tag"></i> 技术</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/p/91c7.html" rel="prev" title="jvm">
+      <i class="fa fa-chevron-left"></i> jvm
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/p/366f.html" rel="next" title="基础">
+      基础 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GET-POST-区别"><span class="nav-number">1.</span> <span class="nav-text">GET/POST 区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UDP-TCP区别"><span class="nav-number">2.</span> <span class="nav-text">UDP/TCP区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三次握手"><span class="nav-number">3.</span> <span class="nav-text">三次握手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四次挥手"><span class="nav-number">4.</span> <span class="nav-text">四次挥手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#超时重传"><span class="nav-number">5.</span> <span class="nav-text">超时重传</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流量控制"><span class="nav-number">6.</span> <span class="nav-text">流量控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拥塞控制"><span class="nav-number">7.</span> <span class="nav-text">拥塞控制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARQ"><span class="nav-number">8.</span> <span class="nav-text">ARQ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ARP"><span class="nav-number">9.</span> <span class="nav-text">ARP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#长连接"><span class="nav-number">10.</span> <span class="nav-text">长连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-1-0、1-1、2-0"><span class="nav-number">11.</span> <span class="nav-text">HTTP 1.0、1.1、2.0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#说一下-HTTPS-的流程、SSL-是什么、什么是非对称加密、对称加密、RSA-具体实现"><span class="nav-number">12.</span> <span class="nav-text">说一下 HTTPS 的流程、SSL 是什么、什么是非对称加密、对称加密、RSA 具体实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI-七层模型是什么、都有哪些协议、TCP-IP-四层是什么。"><span class="nav-number">13.</span> <span class="nav-text">OSI 七层模型是什么、都有哪些协议、TCP/IP 四层是什么。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS、ARP-协议原理"><span class="nav-number">14.</span> <span class="nav-text">DNS、ARP 协议原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#地址栏输入-URL-发生了什么"><span class="nav-number">15.</span> <span class="nav-text">地址栏输入 URL 发生了什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WebSocket-是什么"><span class="nav-number">16.</span> <span class="nav-text">WebSocket 是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些网络安全问题"><span class="nav-number">17.</span> <span class="nav-text">一些网络安全问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-是不保存状态的协议、那么如何保存用户状态"><span class="nav-number">18.</span> <span class="nav-text">HTTP 是不保存状态的协议、那么如何保存用户状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie-的作用是什么、和-Session-有什么区别"><span class="nav-number">19.</span> <span class="nav-text">Cookie 的作用是什么、和 Session 有什么区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Session-的实现机制是什么、分布式环境下有什么注意事项、如果注销-Session、设置-Session-的时长如何操作、默认时长是多少。"><span class="nav-number">20.</span> <span class="nav-text">Session 的实现机制是什么、分布式环境下有什么注意事项、如果注销 Session、设置 Session 的时长如何操作、默认时长是多少。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求转发、URL-重定向和包含有什么区别，如何实现"><span class="nav-number">21.</span> <span class="nav-text">请求转发、URL 重定向和包含有什么区别，如何实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何判断远程机器上某个端口是否开启，项目中需要查看域名在本地的解析-IP-，如何操作。"><span class="nav-number">22.</span> <span class="nav-text">如何判断远程机器上某个端口是否开启，项目中需要查看域名在本地的解析 IP ，如何操作。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet-的生命周期是什么。"><span class="nav-number">23.</span> <span class="nav-text">Servlet 的生命周期是什么。</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="高等游民"
+      src="/images/1.jpeg">
+  <p class="site-author-name" itemprop="name">高等游民</p>
+  <div class="site-description" itemprop="description">卷发星人/程序猿/指弹菜鸟/社恐肥宅</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">129</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/senup?tab=stars" title="GitHub → https://github.com/senup?tab=stars" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://snailclimb.gitee.io/javaguide/#/" title="Guide → https://snailclimb.gitee.io/javaguide/#/" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i>Guide</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.cnblogs.com/senup/" title="cnblog → https://www.cnblogs.com/senup/" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>cnblog</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/images/wechat_channel.jpg" title="WeChat → /images/wechat_channel.jpg"><i class="fab fa-weixin fa-fw"></i>WeChat</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      DaLao
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://www.justzht.com" title="https://www.justzht.com" rel="noopener" target="_blank">justzht</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://199508.com/" title="https://199508.com/" rel="noopener" target="_blank">大雄</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.fueis.com/" title="https://blog.fueis.com/" rel="noopener" target="_blank">当下</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.qqiyu.cn/" title="https://blog.qqiyu.cn/" rel="noopener" target="_blank">七云</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://noheart.cn/" title="https://noheart.cn/" rel="noopener" target="_blank">今今今生</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.juroku.net/" title="https://www.juroku.net/" rel="noopener" target="_blank">致郁系</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://co5.me/" title="https://co5.me/" rel="noopener" target="_blank">少女癌</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://allenmistake.top/" title="https://allenmistake.top/" rel="noopener" target="_blank">AllenMistake</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://lruihao.cn/" title="https://lruihao.cn/" rel="noopener" target="_blank">李瑞豪</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://leflacon.top/" title="https://leflacon.top/" rel="noopener" target="_blank">LeFlacon</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+		<div style="display:inline-block;">
+		<a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style=""> 
+			<img src="/images/yun.png" style="height:30px">
+		</a>
+		</div>
+  <div class="beian"><a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">粤ICP备19119668号 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 2017 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">高等游民</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">309k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:41</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+	  
+
+		
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/medium-zoom@1/dist/medium-zoom.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.3.9/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'lFV1Gj6XzpRCC1xA9YskKGKv-gzGzoHsz',
+      appKey     : 'rCbCQxrpkNpdqAf7NNTJg42D',
+      placeholder: "吐槽一波，嗯？",
+      avatar     : 'retro',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+  
+  <script type="text/javascript" src="/js/firework.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false,"scale":0.8},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script></body>
+</html>
